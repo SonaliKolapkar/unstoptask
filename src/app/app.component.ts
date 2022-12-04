@@ -9,13 +9,16 @@ export class AppComponent {
   title = 'unstoptask';
   //myseatbook:any;
   empty: number = 0;
+  seatspacing = [3,17,24,31,38,45, 52,59,66,73, 80]
 
+  // Function get executed when user click on book button.
   bookMySeats(value: any) {
     this.finalBook(value);
   }
 
   //Book seats enter by the user
   finalBook(inpfromuser: number) {
+    // check do we have seats available
     if (this.allAvail() >= inpfromuser) {
       this.book(inpfromuser);
     }
@@ -24,9 +27,7 @@ export class AppComponent {
     }
   }
 
-
-
-
+  // If seats are available this function get executed
   book(inpfromuser: number) {
     if (inpfromuser == 0) {
       return true;
@@ -44,11 +45,10 @@ export class AppComponent {
     else {
       return false;
     }
-
     return true;
   }
 
-  // Book the seat in each row
+  // Book the seat in each row so that user will get all seats nearby
   bookInRow(row: number, minseat: number) {
     let arr = [];
     for (let i = 0; i < this.seats.length; i++) {
@@ -60,7 +60,8 @@ export class AppComponent {
           break;
         }
       }
-    } alert(`You have booked ${arr}`);
+    }
+    alert(`You have booked ${arr}`);
   }
 
   //Know the seats available in each row
@@ -78,11 +79,11 @@ export class AppComponent {
     }
   }
 
-
   //Check how many total seats are available with us
   allAvail() {
     let available = 0;
     for (let index in this.seats) {
+      // gives all available seats
       if (!this.seats[index].isbooked) {
         available++;
       }
@@ -90,6 +91,7 @@ export class AppComponent {
     return available;
   }
 
+  // array of json object which will represent seats of a coach
   seats = [
     {
       id: 1,

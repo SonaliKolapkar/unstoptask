@@ -1,27 +1,49 @@
-# Unstoptask
+# BookMyTickets
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
+This project is for booking the tickets of a coach of a train. I have  used the Angular for the development of the project. A person can book upto 7 tickets at a time. Total there are 84 seats in a coach. Booking will be done onthe basis of availability in a row such that group of people should not be apart.
 
-## Development server
+## Demo
+**Note: For the best output, please open it in Laptop or Desktop**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+https://bookmyticketindia.netlify.app/
 
-## Code scaffolding
+## Run Locally
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Clone the repo
 
-## Build
+```bash
+    git clone https://github.com/SonaliKolapkar/unstoptask.git
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Go to the project directory
 
-## Running unit tests
+```bash
+  cd unstoptask
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Install dependencies
 
-## Running end-to-end tests
+```bash
+  npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Start the server
 
-## Further help
+```bash
+  ng serve -open
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Authors
+
+- [@sonalikolapkar](https://github.com/SonaliKolapkar)
+
+
+## 🔗 Connect Me
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sonali-kolapkar/)
+
+
+## Feedback
+
+If you have any feedback, please reach out to me at skolapkar176@gmail.com

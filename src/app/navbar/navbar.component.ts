@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  title = "BookMyTickets";
+  github = "https://github.com/SonaliKolapkar";
+  linkedin = "https://www.linkedin.com/in/sonali-kolapkar/";
 }

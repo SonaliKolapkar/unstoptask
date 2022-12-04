@@ -1,32 +1,35 @@
 <div>
+    <!-- Navigation Bar -->
     <app-navbar></app-navbar>
 </div>
 
-
+<!-- Main content of the body -->
 <div class="container">
 
+    <!-- Left Portion of the Screen -->
     <div class="sub-container">
         <h2>Welcome to BookMyTickets</h2>
-        
         <div class="form-group">
             <label for=""> How many seats you want to book: </label>
             <input type="number" class="form-control" ngModel name="myseatbook" #bookseats="ngModel"
                 placeholder="Enter the seats" min="1" max="7" required>
-            <div class="alert alert-danger" *ngIf="bookseats.touched && !bookseats.valid">
+            <div class="alert" *ngIf="bookseats.touched && !bookseats.valid">
                 ** Please enter seats
             </div>
-            <div class="alert alert-danger" *ngIf="bookseats.value > 7 ">
+            <div class="alert" *ngIf="bookseats.value > 7 ">
                 ** Seats cannot be more than 7
             </div><br>
-            <input type="submit" (click)="bookMySeats(bookseats.value)" class="btn btn-primary" value="Book">
+            <input type="submit" (click)="bookMySeats(bookseats.value)" class="btn btn-primary" value="Book Tickets">
         </div>
 
     </div>
+
+    <!-- Right Portion of the Screen -->
     <div class="sub-container">
         <h1>Seat Vaccancy Chart</h1>
         <div class="coach">
-            <div class="seat" *ngFor="let item of seats" id="{{item.id}}">
-                <span [ngClass]="item.isbooked?'red-text':'green-text' ">Seat {{ item.id }}</span>
+            <div class="seat" *ngFor="let item of seats">
+                <span [ngClass]="item.isbooked?'red-text':'green-text'">Seat {{ item.id }} </span>
             </div>
         </div>
     </div>
